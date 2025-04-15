@@ -6,11 +6,13 @@ import cv2
 import numpy as np
 import easyocr
 
+st.set_page_config(page_title="Kannada + English OCR", layout="centered")  # <- FIRST Streamlit command
+
 OCR_LANGUAGES = ['en', 'kn']  # English + Kannada
 
-st.set_page_config(page_title="Kannada + English OCR", layout="centered")
 st.title("📄 Kannada + English OCR App")
 st.caption("Streamlit + EasyOCR (no Tesseract needed!)")
+
 
 # --- Preprocessing function ---
 def preprocess_image(pil_image):
